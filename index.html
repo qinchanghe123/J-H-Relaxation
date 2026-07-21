@@ -527,6 +527,10 @@
       color: #f2d8a4;
     }
 
+    .booking-actions {
+      margin: 26px 0 22px;
+    }
+
     .reviews {
       background: #efe0c7;
       overflow: hidden;
@@ -801,7 +805,7 @@
           Step into a calm, private space designed for deep relaxation, gentle facial renewal,
           and a polished self-care experience.
         </p>
-        <a href="#booking" class="btn btn-primary">Book Now</a>
+        <button type="button" class="btn btn-primary" onclick="openSetmoreBooking()">Book Now</button>
       </div>
     </section>
 
@@ -901,7 +905,7 @@
             </ul>
           </div>
 
-          <a href="#booking" class="btn btn-primary">Book This Experience</a>
+          <button type="button" class="btn btn-primary" onclick="openSetmoreBooking()">Book This Experience</button>
         </div>
       </div>
     </section>
@@ -1005,21 +1009,26 @@
     <section class="booking" id="booking">
       <div class="section-heading">
         <div class="small">Booking</div>
-        <h2>Request an Appointment</h2>
+        <h2>Book Your Appointment</h2>
         <p>
-          Please contact J&H Relaxation directly to book your preferred service, date, and time.
+          Select your preferred service, date, and time through our secure online booking system.
         </p>
       </div>
 
       <div class="booking-wrap">
         <div class="booking-info">
-          <h3>Book by Phone</h3>
+          <h3>Book Online or by Phone</h3>
+          <p>
+            Use the button below to view real-time availability and reserve your appointment.
+          </p>
+
+          <div class="booking-actions">
+            <script id="anywhere_book_now_script" type="text/javascript" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script><button style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" id="Anywhere_button_iframe" class="anywhere-book-now-button" data-booking-url="https://jhrelaxation.setmore.com" data-new-tab="false">Book now</button>
+          </div>
+
           <p><strong>Phone:</strong> <a href="tel:8483887519">848-388-7519</a></p>
           <p><strong>Email:</strong> <a href="mailto:jhrelaxation@gmail.com">jhrelaxation@gmail.com</a></p>
           <p><strong>Location:</strong> 9 South Main Street, St F1, Marlboro, NJ 07746</p>
-          <p>
-            For the fastest confirmation, please call directly during current business hours.
-          </p>
         </div>
       </div>
     </section>
@@ -1152,6 +1161,17 @@
   </footer>
 
   <script>
+    function openSetmoreBooking() {
+      const bookingButton = document.getElementById("Anywhere_button_iframe");
+
+      if (bookingButton) {
+        bookingButton.click();
+        return;
+      }
+
+      window.location.href = "https://jhrelaxation.setmore.com";
+    }
+
     const heroImages = [
       "https://images.squarespace-cdn.com/content/v1/5d5f2058a79cbf000111652a/1586842536251-IY8XEBZ4JINBCSKZKAHT/FaceMassage.jpg",
       "https://i.pinimg.com/1200x/84/cd/b7/84cdb7509c5bacdc80bdf1336985d900.jpg",
