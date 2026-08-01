@@ -442,6 +442,11 @@
       transform: scale(1);
     }
 
+    .service-carousel.poster-full img {
+      object-fit: contain;
+      background: var(--white);
+    }
+
     .service-content {
       padding: 30px;
       flex: 1;
@@ -920,6 +925,21 @@
       </div>
 
       <div class="service-grid">
+        <article class="service-card">
+          <div class="service-carousel poster-full">
+            <img class="active" src="exp.jpg" alt="Project experience offer poster">
+          </div>
+
+          <div class="service-content">
+            <h3>Project Experience</h3>
+            <div class="meta">Special experience offer</div>
+            <p>
+              Enjoy a natural face lifting relaxation experience at a special introductory price.
+            </p>
+            <div class="price">Project Experience Price · $198</div>
+          </div>
+        </article>
+
         <article class="service-card">
           <div class="service-carousel" data-carousel>
             <img class="active" src="https://i.pinimg.com/1200x/84/cd/b7/84cdb7509c5bacdc80bdf1336985d900.jpg" alt="Single session facial sculpting treatment">
