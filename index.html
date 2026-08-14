@@ -398,6 +398,43 @@
       font-size: 1.4rem;
     }
 
+    .wellness-gallery {
+      background: var(--white);
+    }
+
+    .wellness-gallery-grid {
+      max-width: 1180px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      align-items: start;
+    }
+
+    .wellness-gallery-card {
+      background: var(--cream);
+      border-radius: 30px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(184, 139, 69, 0.22);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .wellness-gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 48px rgba(58, 33, 15, 0.22);
+    }
+
+    .wellness-gallery-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 22px;
+      object-fit: contain;
+      background: #f2e3cf;
+    }
+
     .services {
       background: linear-gradient(180deg, var(--cream), #efe0c7);
     }
@@ -722,6 +759,7 @@
 
       .about-grid,
       .features-grid,
+      .wellness-gallery-grid,
       .service-grid,
       .contact-grid {
         grid-template-columns: 1fr;
@@ -792,6 +830,7 @@
     <nav>
       <a href="#about">About</a>
       <a href="#features">Features</a>
+      <a href="#wellness-gallery">Wellness</a>
       <a href="#services">Services</a>
       <a href="#booking">Book Now</a>
       <a href="#reviews">Reviews</a>
@@ -911,6 +950,26 @@
           </div>
 
           <button type="button" class="btn btn-primary" onclick="openSetmoreBooking()">Book This Experience</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="wellness-gallery" id="wellness-gallery">
+      <div class="section-heading">
+        <div class="small">Wellness Technology</div>
+        <h2>Whole-Body Wellness Experience</h2>
+        <p>
+          Explore our wellness system and its available modes through the two featured posters below.
+        </p>
+      </div>
+
+      <div class="wellness-gallery-grid">
+        <div class="wellness-gallery-card">
+          <img src="31.jpg" alt="Whole-body wellness overview">
+        </div>
+
+        <div class="wellness-gallery-card">
+          <img src="32.jpg" alt="Whole-body wellness system and six modes">
         </div>
       </div>
     </section>
