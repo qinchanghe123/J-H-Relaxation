@@ -3,7 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>J&H Relaxation | Natural Face Lifting Through Relaxation</title>
+  <title>J&amp;H Relaxation &amp; Wellness | Facial Relaxation &amp; Wellness in Marlboro, NJ</title>
+  <meta name="description" content="J&amp;H Relaxation &amp; Wellness is a relaxation and wellness studio in Marlboro, NJ, offering gentle facial relaxation and self-care experiences. Book a visit." />
+  <meta name="theme-color" content="#f7efe1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="J&amp;H Relaxation &amp; Wellness | Marlboro, NJ" />
+  <meta property="og:description" content="A welcoming space for facial relaxation, wellness and self-care in Marlboro, New Jersey." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "J&H Relaxation & Wellness",
+    "description": "Relaxation and wellness studio offering gentle facial relaxation and self-care experiences.",
+    "telephone": "+1-848-388-7519",
+    "email": "jhrelaxation@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "9 South Main Street, St F1",
+      "addressLocality": "Marlboro",
+      "addressRegion": "NJ",
+      "postalCode": "07746",
+      "addressCountry": "US"
+    },
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": "https://jhrelaxation.setmore.com"
+    }
+  }
+  </script>
 
   <style>
     :root {
@@ -24,6 +52,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 92px;
     }
 
     body {
@@ -56,10 +85,9 @@
     .brand {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      font-size: 1.45rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      gap: 11px;
+      flex: 0 0 auto;
+      min-width: 0;
       text-transform: uppercase;
     }
 
@@ -68,20 +96,77 @@
       height: 48px;
       object-fit: contain;
       display: block;
+      flex: 0 0 auto;
     }
 
-    .brand span {
+    .brand-name {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.12;
+      min-width: 0;
+    }
+
+    .brand-name strong {
       color: var(--gold);
+      font-size: 1.16rem;
+      letter-spacing: 0.055em;
+    }
+
+    .brand-name small {
+      color: var(--brown-soft);
+      font-family: Arial, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      margin-top: 4px;
     }
 
     nav {
       display: flex;
-      gap: 22px;
+      align-items: center;
+      gap: 20px;
       font-size: 0.95rem;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a:focus-visible {
       color: var(--gold);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      width: 44px;
+      height: 44px;
+      margin-left: auto;
+      border: 1px solid rgba(58, 33, 15, 0.18);
+      border-radius: 12px;
+      background: var(--white);
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 21px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--brown);
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .topbar.menu-open .menu-toggle span:first-child {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .topbar.menu-open .menu-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .topbar.menu-open .menu-toggle span:last-child {
+      transform: translateY(-7px) rotate(-45deg);
     }
 
     .hero {
@@ -94,6 +179,7 @@
       padding: 120px 7% 80px;
       overflow: hidden;
       color: var(--white);
+      background-color: #3b2819; /* fallback if the external photo cannot load */
       background-image:
         linear-gradient(rgba(32, 18, 8, 0.55), rgba(32, 18, 8, 0.58)),
         var(--hero-bg);
@@ -116,23 +202,52 @@
     }
 
     .hero h1 {
-      font-size: clamp(3rem, 8vw, 7rem);
-      line-height: 0.95;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      font-size: clamp(2.5rem, 6.5vw, 6.2rem);
+      line-height: 1.02;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+      overflow-wrap: normal;
+    }
+
+    .hero-title-main,
+    .hero-title-wellness {
+      display: block;
+    }
+
+    .hero-title-wellness {
+      color: #f5dca9;
+      font-size: 0.8em;
+      letter-spacing: 0.055em;
+      margin-top: 0.1em;
+    }
+
+    .hero-category {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      padding: 8px 16px;
       margin-bottom: 22px;
+      border: 1px solid rgba(255, 245, 220, 0.6);
+      border-radius: 99px;
+      background: rgba(58, 33, 15, 0.25);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
     }
 
     .hero h2 {
-      font-size: clamp(1.35rem, 3vw, 2.5rem);
+      font-size: clamp(1.25rem, 2.7vw, 2.2rem);
       font-weight: 400;
       margin-bottom: 14px;
     }
 
     .hero p {
       max-width: 660px;
-      margin: 0 auto 34px;
-      font-size: 1.15rem;
+      margin: 0 auto 30px;
+      font-size: 1.13rem;
       color: #fff4df;
     }
 
@@ -676,7 +791,7 @@
     }
 
     .faq-item.active .faq-answer {
-      max-height: 160px;
+      max-height: 360px;
     }
 
     .faq-item.active .faq-question span {
@@ -752,10 +867,37 @@
       }
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1100px) {
+      .menu-toggle {
+        display: inline-flex;
+      }
+
       nav {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 7% 18px;
+        background: rgba(247, 239, 225, 0.98);
+        border-bottom: 1px solid rgba(58, 33, 15, 0.12);
+        box-shadow: 0 16px 25px rgba(58, 33, 15, 0.12);
       }
+
+      .topbar.menu-open nav {
+        display: flex;
+      }
+
+      nav a {
+        padding: 11px 6px;
+        border-bottom: 1px solid rgba(58, 33, 15, 0.08);
+      }
+    }
+
+    @media (max-width: 980px) {
 
       .about-grid,
       .features-grid,
@@ -780,7 +922,6 @@
       }
 
       .brand {
-        font-size: 1.05rem;
         gap: 8px;
       }
 
@@ -789,13 +930,47 @@
         height: 38px;
       }
 
+      .brand-name strong {
+        font-size: clamp(0.9rem, 3.85vw, 1.1rem);
+        letter-spacing: 0.02em;
+      }
+
+      .brand-name small {
+        font-size: 0.64rem;
+        letter-spacing: 0.13em;
+      }
+
       section {
         padding: 70px 5%;
       }
 
       .hero {
-        padding-left: 5%;
-        padding-right: 5%;
+        min-height: 100svh;
+        padding: 118px 5% 62px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 8.4vw, 3.5rem);
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      .hero-title-wellness {
+        letter-spacing: 0.035em;
+      }
+
+      .hero-category {
+        font-size: 0.73rem;
+        margin-bottom: 18px;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .eyebrow {
+        font-size: 0.74rem;
+        letter-spacing: 0.15em;
       }
 
       .about-card,
@@ -817,17 +992,54 @@
         width: 290px;
       }
     }
+
+    @media (max-width: 350px) {
+      .topbar {
+        padding-left: 3%;
+        padding-right: 3%;
+      }
+
+      .brand-name strong {
+        font-size: 0.85rem;
+      }
+
+      .brand-name small {
+        font-size: 0.6rem;
+      }
+
+      .hero h1 {
+        font-size: 1.92rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
 
 <body>
   <header class="topbar">
-    <a href="#home" class="brand">
-      <img src="logo.png" alt="J&H Relaxation Logo" class="brand-logo" />
-      <span>J&H Relaxation</span>
+    <a href="#home" class="brand" aria-label="J&H Relaxation & Wellness — home">
+      <img src="logo.png" alt="J&H Relaxation & Wellness logo" class="brand-logo" onerror="this.style.display='none'" />
+      <span class="brand-name">
+        <strong>J&amp;H Relaxation</strong>
+        <small>&amp; Wellness</small>
+      </span>
     </a>
 
-    <nav>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="primary-nav" aria-label="Main navigation">
       <a href="#about">About</a>
       <a href="#features">Features</a>
       <a href="#wellness-gallery">Wellness</a>
@@ -842,14 +1054,18 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-content">
-        <div class="eyebrow">Natural Face Lifting Through Relaxation</div>
-        <h1>J&H Relaxation</h1>
-        <h2>Rediscover Your Youthful Glow</h2>
+        <div class="eyebrow">Facial Relaxation &amp; Whole-Body Wellness</div>
+        <h1>
+          <span class="hero-title-main">J&amp;H Relaxation</span>
+          <span class="hero-title-wellness">&amp; Wellness</span>
+        </h1>
+        <div class="hero-category">Relaxation &amp; Wellness Studio · Marlboro, New Jersey</div>
+        <h2>Relax, Refresh &amp; Rediscover Your Glow</h2>
         <p>
-          Step into a calm, private space designed for deep relaxation, gentle facial renewal,
-          and a polished self-care experience.
+          Discover gentle facial relaxation, wellness experiences, and a peaceful space
+          dedicated to comfort, self-care, and feeling refreshed.
         </p>
-        <button type="button" class="btn btn-primary" onclick="openSetmoreBooking()">Book Now</button>
+        <a class="btn btn-primary" href="https://jhrelaxation.setmore.com" target="_blank" rel="noopener noreferrer">Book Your Wellness Visit</a>
       </div>
     </section>
 
@@ -858,20 +1074,20 @@
         <div class="about-card">
           <div class="section-heading" style="text-align:left;margin:0 0 24px;">
             <div class="small">About Us</div>
-            <h2>A quiet place to relax, refresh, and restore.</h2>
+            <h2>Your calming space for facial relaxation &amp; wellness.</h2>
           </div>
 
           <p>
-            J&H Relaxation is created around a simple idea: every visit should feel calm,
-            clean, private, and restorative from the moment you arrive.
+            J&amp;H Relaxation &amp; Wellness is a relaxation and wellness studio in Marlboro,
+            New Jersey. Every visit is designed to feel calm, clean, private, and restorative.
           </p>
           <p>
-            The treatment room is designed to be peaceful and comfortable, with a soothing
-            atmosphere that helps you slow down and enjoy a focused relaxation experience.
+            Our studio focuses on gentle facial relaxation and a peaceful self-care experience.
+            We also introduce guests to our featured whole-body wellness system and options.
           </p>
           <p>
-            Our philosophy is centered on gentle care, privacy, cleanliness, and helping each
-            guest leave feeling refreshed and renewed.
+            Whether you are exploring facial relaxation or simply looking for time to unwind,
+            our approach is centered on comfort, personal attention, and feeling refreshed.
           </p>
         </div>
 
@@ -881,8 +1097,8 @@
 
     <section class="features" id="features">
       <div class="section-heading">
-        <div class="small">Store Features</div>
-        <h2>New Anti-Aging Relaxation Technology</h2>
+        <div class="small">Facial Relaxation &amp; Wellness</div>
+        <h2>Discover Our Natural Facial Relaxation Approach</h2>
         <p>
           A naturally beautiful, hands-on relaxation experience designed to lift, firm,
           rejuvenate, and refresh the look of your face without invasive procedures.
@@ -905,7 +1121,7 @@
           <h3>Lift · Firm · Rejuvenate Naturally</h3>
 
           <p>
-            J&H Relaxation focuses on a gentle, non-invasive facial relaxation technique
+            J&amp;H Relaxation &amp; Wellness focuses on a gentle, non-invasive facial relaxation technique
             created for guests who want a refreshed, firmer, and more radiant appearance
             through profound relaxation.
           </p>
@@ -950,17 +1166,18 @@
             </ul>
           </div>
 
-          <button type="button" class="btn btn-primary" onclick="openSetmoreBooking()">Book This Experience</button>
+          <a class="btn btn-primary" href="https://jhrelaxation.setmore.com" target="_blank" rel="noopener noreferrer">Book This Experience</a>
         </div>
       </div>
     </section>
 
     <section class="wellness-gallery" id="wellness-gallery">
       <div class="section-heading">
-        <div class="small">Wellness Technology</div>
-        <h2>Whole-Body Wellness Experience</h2>
+        <div class="small">More Than Facial Care</div>
+        <h2>Explore Whole-Body Wellness</h2>
         <p>
-          Explore our wellness system and its available modes through the two featured posters below.
+          Wellness is part of our name and our approach to self-care. Learn about our featured
+          whole-body wellness system and its modes in the posters below. Contact us for current availability.
         </p>
       </div>
 
@@ -979,9 +1196,9 @@
     <section class="services" id="services">
       <div class="section-heading">
         <div class="small">Services & Pricing</div>
-        <h2>Natural Face Lifting Packages</h2>
+        <h2>Facial Relaxation &amp; Wellness Packages</h2>
         <p>
-          Pricing and package details are based only on the provided J&H Relaxation information.
+          Explore our natural facial relaxation packages and choose an option that suits your self-care routine.
         </p>
       </div>
 
@@ -1090,9 +1307,10 @@
     <section class="booking" id="booking">
       <div class="section-heading">
         <div class="small">Booking</div>
-        <h2>Book Your Appointment</h2>
+        <h2>Book Your Relaxation &amp; Wellness Visit</h2>
         <p>
-          Select your preferred service, date, and time through our secure online booking system.
+          Explore available appointments and choose a facial relaxation experience that suits you.
+          For details about wellness offerings, please contact our studio directly.
         </p>
       </div>
 
@@ -1104,8 +1322,10 @@
           </p>
 
           <div class="booking-actions">
-            <script id="anywhere_book_now_script" type="text/javascript" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script><button style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" id="Anywhere_button_iframe" class="anywhere-book-now-button" data-booking-url="https://jhrelaxation.setmore.com" data-new-tab="false">Book now</button>
+            <script id="anywhere_book_now_script" type="text/javascript" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script>
+            <button style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;" id="Anywhere_button_iframe" class="anywhere-book-now-button" data-booking-url="https://jhrelaxation.setmore.com" data-new-tab="false">Book now</button>
           </div>
+          <p>Or <a href="https://jhrelaxation.setmore.com" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">open our online booking page directly</a>.</p>
 
           <p><strong>Phone:</strong> <a href="tel:8483887519">848-388-7519</a></p>
           <p><strong>Email:</strong> <a href="mailto:jhrelaxation@gmail.com">jhrelaxation@gmail.com</a></p>
@@ -1161,6 +1381,13 @@
 
       <div class="faq-list">
         <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">What is J&amp;H Relaxation &amp; Wellness? <span aria-hidden="true">+</span></button>
+          <div class="faq-answer">
+            <p>We are a relaxation and wellness studio in Marlboro, NJ, focused on gentle facial relaxation and self-care. We also feature whole-body wellness information; contact us to ask which experiences are currently available.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
           <button class="faq-question" type="button">How early should I arrive? <span>+</span></button>
           <div class="faq-answer">
             <p>Please arrive a few minutes early so you have time to settle in and begin your visit in a relaxed way.</p>
@@ -1170,7 +1397,7 @@
         <div class="faq-item">
           <button class="faq-question" type="button">Can I get a massage if I have an injury? <span>+</span></button>
           <div class="faq-answer">
-            <p>Please consult your healthcare provider first and let J&H Relaxation know about any injury or concern before booking.</p>
+            <p>Please consult your healthcare provider first and let J&amp;H Relaxation &amp; Wellness know about any injury or concern before booking.</p>
           </div>
         </div>
 
@@ -1193,7 +1420,7 @@
     <section class="contact" id="contact">
       <div class="section-heading">
         <div class="small">Contact & Location</div>
-        <h2>Visit J&H Relaxation</h2>
+        <h2>Visit J&amp;H Relaxation &amp; Wellness</h2>
       </div>
 
       <div class="contact-grid">
@@ -1223,7 +1450,7 @@
 
           <div class="contact-line">
             <strong>Instagram / Facebook</strong>
-            J&H Relaxation
+            J&amp;H Relaxation &amp; Wellness
           </div>
         </div>
 
@@ -1238,21 +1465,10 @@
   </main>
 
   <footer>
-    <p>© <span id="year"></span> J&H Relaxation. Natural Face Lifting Through Relaxation.</p>
+    <p>© <span id="year"></span> J&amp;H Relaxation &amp; Wellness. Facial Relaxation &amp; Self-Care in Marlboro, NJ.</p>
   </footer>
 
   <script>
-    function openSetmoreBooking() {
-      const bookingButton = document.getElementById("Anywhere_button_iframe");
-
-      if (bookingButton) {
-        bookingButton.click();
-        return;
-      }
-
-      window.location.href = "https://jhrelaxation.setmore.com";
-    }
-
     const heroImages = [
       "https://images.squarespace-cdn.com/content/v1/5d5f2058a79cbf000111652a/1586842536251-IY8XEBZ4JINBCSKZKAHT/FaceMassage.jpg",
       "https://i.pinimg.com/1200x/84/cd/b7/84cdb7509c5bacdc80bdf1336985d900.jpg",
@@ -1294,10 +1510,40 @@
     });
 
     document.querySelectorAll(".faq-question").forEach((button) => {
+      button.setAttribute("aria-expanded", "false");
+      const icon = button.querySelector("span");
+      if (icon) icon.setAttribute("aria-hidden", "true");
       button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
-        item.classList.toggle("active");
+        const isOpen = item.classList.toggle("active");
+        button.setAttribute("aria-expanded", String(isOpen));
       });
+    });
+
+    const topbar = document.querySelector(".topbar");
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.getElementById("primary-nav");
+
+    function setMenuOpen(open) {
+      topbar.classList.toggle("menu-open", open);
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      setMenuOpen(!topbar.classList.contains("menu-open"));
+    });
+
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setMenuOpen(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1100) setMenuOpen(false);
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
